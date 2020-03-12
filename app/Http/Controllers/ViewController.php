@@ -10,4 +10,10 @@ class ViewController extends Controller
     {
         return view('index');
     }
+
+    public function notrealoe() 
+    {
+        return view('notre-aloe');
+    }
 }
+

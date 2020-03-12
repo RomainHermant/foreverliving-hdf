@@ -16,7 +16,9 @@ Route::get('/', function () {
 });
 
 Route::get('/index', 'ViewController@index')->name('index');
-
+//Notre Aloe
+Route::get('/notre-aloe', 'ViewController@notrealoe')->name('notre-aloe');
+//Page Produit
 Route::get('/Produits', 'ProduitController@index')->name('products');
 Route::get('/Produits/addProduit', 'ProduitController@addProduitForm')->name('addProduitForm');
 Route::post('/Produits/add', 'ProduitController@add')->name('addProduit');
