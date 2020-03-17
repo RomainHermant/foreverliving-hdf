@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ForeignKeyUserCategory extends Migration
+class CreateFAQSTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class ForeignKeyUserCategory extends Migration
      */
     public function up()
     {
-        Schema::table('produits', function (Blueprint $table) {
-            $table->foreign('category')->references('id')->on('categories');
+        Schema::create('f_a_q_s', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->longText('question');
+            $table->longText('reponse');
+            $table->timestamps();
         });
     }
 
@@ -25,6 +28,6 @@ class ForeignKeyUserCategory extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('f_a_q_s');
     }
 }

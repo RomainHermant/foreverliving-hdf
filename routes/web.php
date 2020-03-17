@@ -25,3 +25,10 @@ Route::post('/Produits/add', 'ProduitController@add')->name('addProduit');
 Route::get('/Produits/update/{id}', 'ProduitController@updateProduitForm')->name('updateProduitForm');
 Route::post('/Produits/update', 'ProduitController@update')->name('updateProduit');
 Route::post('/Produits/delete/{id}', 'ProduitController@delete')->name('deleteProduit');
+//Page FAQ
+Route::get('/FAQs', 'FAQController@index')->name('FAQs');
+Route::get('/FAQs/addFAQ', 'FAQController@addFAQForm')->name('addFAQForm');
+Route::post('/FAQs/add', 'FAQController@add')->name('addFAQ');
+Route::get('/FAQs/update/{id}', 'FAQController@updateFAQForm')->name('updateFAQForm');
+Route::post('/FAQs/update', 'FAQController@update')->name('updateFAQ');
+Route::post('/FAQs/delete/{id}', 'FAQController@delete')->name('deleteFAQ');
