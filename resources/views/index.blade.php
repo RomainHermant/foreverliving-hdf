@@ -12,9 +12,9 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div  class="min-h-screen bg-gray-200">
-            <div class="flex flex-wrap w-auto pt-40">
-                <div class="card relative w-1/3 rounded-lg shadow-lg mx-auto bg-gray-100 px-10" id="card">
+        <div  class="bg-gray-200">
+            <div class="flex flex-wrap w-auto pt-40 pb-10">
+                <div class="card relative w-6/12 rounded-lg shadow-lg mx-auto bg-gray-100 px-10" id="card">
                     <div class="h-full flex flex-col items-center justify-center">
                         <div class="flex-1 w-full flex items-center justify-center text-center">
                             <span class="text-4xl mx-5 h-20 text-gray-700">Qui sommes-nous ?</span>
@@ -27,8 +27,11 @@
                         dans l'enthousiasme et l'empathie tout en cultivant l'envie d'entreprendre et l'esprit visionnaire qui
                         caractérisent Rex et ses engagements de toujours.
                         </p>
+                        <div class="my-10">
+                            <img class="" src="{{asset('storage/images/qui-sommes-nous-info.png')}}" alt="Background">
+                        </div>
                         <div class="flex-1 w-full flex items-center justify-center text-center">
-                            <a class="btn bg-yellow-400 text-black rounded-full hover:text-teal-500 mt-4 lg:mt-0 text-base px-4 py-2 leading-none" :href="#">Des questions ?</a>
+                            <a class="btn bg-yellow-400 text-black rounded-full hover:text-teal-500 mb-5 lg:mt-0 text-base px-4 py-2 leading-none" :href="#">Des questions ?</a>
                         </div>
                     </div>
                 </div>
@@ -37,14 +40,14 @@
                 </div>
             </div>
             <!-- Background de transition -->
-            <div class="absolute bottom-0 w-full">
+            <div class="w-full">
                 <img class="w-full" src="{{asset('storage/images/triangle-wave.png')}}" alt="Background">
             </div>
             <!-- Fin background de transition -->
         </div>
 
         <!-- Bloc des sections -->
-        <div class="bg-gray-100 pt-10">
+        <div class="bg-gray-100 py-10">
             <div class="text-center text-4xl mx-5 h-20 text-gray-700">
                 <h1>Forever Living Products, votre allié au quotidien</h1>
             </div>
@@ -110,5 +113,10 @@
             <!-- Fin card nous rejoindre -->
         </div>
         <!-- Fin bloc des sections -->
+        <!-- Footer -->
+            <div class="bg-gray-200 p-10">
+                <p class="text-center">© Copyright ForeverLiving - Tous droits reservés</p>
+            </div>
+        <!-- Fin footer -->
     </body>
 </html>
