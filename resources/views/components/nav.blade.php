@@ -6,8 +6,8 @@
     </div>
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="text-sm lg:flex-grow text-black text-xl">
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-red-600 pl-8 pr-2">
-            Docs
+        <a href="{{ route('faq') }}" class="block mt-4 lg:inline-block lg:mt-0 hover:text-red-600 pl-8 pr-2">
+            FAQ
         </a>
         <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-red-600 px-2">
             Examples

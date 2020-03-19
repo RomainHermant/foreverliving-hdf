@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Produit;
 use App\Category;
@@ -11,7 +12,7 @@ class ProduitController extends Controller
     //
     public function index()
     {
-        $produits = Produit::all(); 
+        $produits = Produit::all();
         return view('Produit.index',['produits' => $produits]);
     }
 

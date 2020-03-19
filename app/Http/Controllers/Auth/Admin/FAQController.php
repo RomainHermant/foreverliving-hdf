@@ -1,15 +1,21 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\FAQ;
 
 class FAQController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
+
     public function index()
     {
-        $faqs = FAQ::all(); 
+        $faqs = FAQ::all();
         return view('FAQ.index',['faqs' => $faqs]);
     }
 

@@ -22,7 +22,7 @@
                         <p class ="text-center">
                         C'est avec une bonne dose de passion et beaucoup d'intégrité que les membres de l'entreprise
                         travaillent auprès de Rex Maughan et cela depuis de nombreuses années pour certains.
-                        
+
                         Nous accomplissons chaque jour nos missions en respectant les valeurs de Forever Living Products,
                         dans l'enthousiasme et l'empathie tout en cultivant l'envie d'entreprendre et l'esprit visionnaire qui
                         caractérisent Rex et ses engagements de toujours.
@@ -65,7 +65,7 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit asperiores quasi eveniet, sapiente repellendus maxime consequatur pariatur fugiat rem aspernatur accusantium natus. Deleniti minus excepturi quisquam, architecto expedita dicta cumque!
                         </p>
                         <div class="flex-1 w-full flex items-center text-center">
-                            <a class="btn bg-yellow-400 text-black rounded-full hover:text-teal-500 mt-4 lg:mt-0 text-base px-4 py-2 leading-none" :href="#">Des questions ?</a>
+                            <a class="btn bg-yellow-400 text-black rounded-full hover:text-teal-500 mt-4 lg:mt-0 text-base px-4 py-2 leading-none" href="{{ route('faq') }}">Des questions ?</a>
                         </div>
                     </div>
                 </div>
