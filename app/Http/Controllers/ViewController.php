@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\FAQ;
+use App\Produit;
 use Illuminate\Http\Request;
 
 class ViewController extends Controller
@@ -20,7 +21,13 @@ class ViewController extends Controller
     public function faq()
     {
         $faqs = FAQ::all();
-        return view('faq', compact('faqs'));
+        return view('faq.index', compact('faqs'));
+    }
+
+    public function products()
+    {
+        $products = Produit::all();
+        return view('products.index', compact('products'));
     }
 }
 

@@ -14,7 +14,7 @@
     <body>
         <div  class="bg-gray-200">
             <div class="flex flex-col md:flex-row w-10/12 mx-auto pt-40 pb-10">
-                <div class="w-full md:w-1/2 lg:w-6/12 mr-0 md:mr-4 card relative mb-5 lg:mb-0 rounded-lg shadow-lg mx-auto md:mx-0 bg-gray-100" id="card">
+                <div class="w-full md:w-1/2 lg:w-6/12 mr-0 md:mr-4 card relative mb-5 lg:mb-0 rounded-lg shadow-lg mx-auto md:mx-0 bg-white" id="card">
                     <div class="h-full flex flex-col items-center justify-center">
                         <div class="flex-1 w-full flex items-center justify-center text-center">
                             <span class="text-4xl lg:mx-5 h-20 text-gray-700">Qui sommes-nous ?</span>
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-1/2">
+                <div class="mx-4 w-full md:w-1/2">
                     <img class="ml-auto rounded-lg" src="{{asset('storage/images/qui-sommes-nous.jpg')}}" alt="Image d'aloe vera planté dans un champ">
                 </div>
             </div>

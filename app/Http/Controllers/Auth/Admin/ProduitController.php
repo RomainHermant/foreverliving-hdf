@@ -13,12 +13,12 @@ class ProduitController extends Controller
     public function index()
     {
         $produits = Produit::all();
-        return view('Produit.index',['produits' => $produits]);
+        return view('auth.admin.products.index',['produits' => $produits]);
     }
 
     public function addProduitForm(){
         $categories = Category::all();
-        return view('Produit.add',['categories' => $categories]);
+        return view('auth.admin.products.add',['categories' => $categories]);
     }
 
     public function add(Request $request){
@@ -36,13 +36,13 @@ class ProduitController extends Controller
             $produit->image = $image;
          }
         $produit->save();
-        return redirect()->route('products');
+        return redirect()->route('admin.products');
     }
 
     public function updateProduitForm($id){
         $categories = Category::all();
         $produit = Produit::find($id);
-        return view('Produit.update',['categories' => $categories , 'produit' => $produit]);
+        return view('auth.admin.products.update',['categories' => $categories , 'products' => $produit]);
     }
 
     public function update(Request $request){
@@ -60,13 +60,13 @@ class ProduitController extends Controller
             $produit->image = $image;
          }
         $produit->save();
-        return redirect()->route('products');
+        return redirect()->route('admin.products');
     }
 
     public function delete($id){
         $produit = Produit::find($id);
         $produit->delete();
-        return redirect()->route('products');
+        return redirect()->route('admin.products');
     }
 
 }

@@ -16,11 +16,11 @@ class FAQController extends Controller
     public function index()
     {
         $faqs = FAQ::all();
-        return view('FAQ.index',['faqs' => $faqs]);
+        return view('auth.admin.faq.index',['faqs' => $faqs]);
     }
 
     public function addFAQForm(){
-        return view('FAQ.add');
+        return view('auth.admin.faq.add');
     }
 
     public function add(Request $request){
@@ -28,12 +28,12 @@ class FAQController extends Controller
         $faq->question = $request->question;
         $faq->reponse = $request->reponse;
         $faq->save();
-        return redirect()->route('FAQs');
+        return redirect()->route('admin.faq');
     }
 
     public function updateFAQForm($id){
         $faq = FAQ::find($id);
-        return view('FAQ.update',[ 'faq' => $faq]);
+        return view('auth.admin.faq.update',[ 'faq' => $faq]);
     }
 
     public function update(Request $request){
@@ -41,12 +41,12 @@ class FAQController extends Controller
         $faq->question = $request->question;
         $faq->reponse = $request->reponse;
         $faq->save();
-        return redirect()->route('FAQs');
+        return redirect()->route('admin.faq');
     }
 
     public function delete($id){
         $faq = FAQ::find($id);
         $faq->delete();
-        return redirect()->route('FAQs');
+        return redirect()->route('admin.faq');
     }
 }
