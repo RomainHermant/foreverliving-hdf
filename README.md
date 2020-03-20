@@ -1,6 +1,6 @@
 <p align="center"><img height="170" src="https://photos.smugmug.com/photos/i-VKnSVxZ/0/X2/i-VKnSVxZ-X2.png"></p>
 
-Documentation pour l'installation du site MyAllonsY. 
+Documentation pour l'installation du site Forever Living HDF. 
 
 # Sommaire
 
