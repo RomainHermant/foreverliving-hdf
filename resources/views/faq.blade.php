@@ -2,49 +2,35 @@
 
 @section('content')
     <style>
-        .accordion {
-            background-color: #eee;
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            transition: 0.4s;
+        .active {
+            border-bottom: none;
         }
 
-        .active, .accordion:hover {
-            background-color: #ccc;
-        }
-
-        .panel {
-            padding: 0 18px;
-            display: none;
-            background-color: white;
-            overflow: hidden;
-            width: 100%;
-        }
     </style>
 
-    <h2 class="text-2xl">Foire aux questions</h2>
+    <div class="text-center">
+        <h2 class="text-3xl mb-4">Foire aux questions</h2>
+    </div>
+
+    <hr class="border-2 border-gray-400">
 
     @foreach($faqs as $faq)
-    <button class="accordion">{{ $faq->question }}</button>
-    <div class="panel">
-        <p>{{ $faq->reponse }}</p>
-    </div>
+        <button class="accordion outline-none text-xl text-gray-800 w-full text-left border-b-2 border-gray-400 px-3 py-4">
+            {{ $faq->question }}
+        </button>
+        <div class="panel hidden w-full px-3 pb-4 border-b-2 border-gray-400 text-gray-600">
+            <p>{{ $faq->reponse }}</p>
+        </div>
     @endforeach
 
     <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
+        let acc = document.getElementsByClassName("accordion");
+        let i;
 
         for (i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function() {
                 this.classList.toggle("active");
-                var panel = this.nextElementSibling;
+                let panel = this.nextElementSibling;
                 if (panel.style.display === "block") {
                     panel.style.display = "none";
                 } else {
